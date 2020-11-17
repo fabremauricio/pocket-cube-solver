@@ -4,22 +4,22 @@ public class Controller {
     Movement movement = new Movement();
     if (command == 0) {
       movement.cube = moveFrontPos(cube);
-      movement.type = "FRONT + ";
+      movement.type = MovementType.FRONT_POS;
     } else if (command == 1) {
       movement.cube = moveFrontNeg(cube);
-      movement.type = "FRONT - ";
+      movement.type = MovementType.FRONT_NEG;
     } else if (command == 2) {
       movement.cube = moveTopPos(cube);
-      movement.type = "TOP +   ";
+      movement.type = MovementType.TOP_POS;
     } else if (command == 3) {
       movement.cube = moveTopNeg(cube);
-      movement.type = "TOP -   ";
+      movement.type = MovementType.TOP_NEG;
     } else if (command == 4) {
       movement.cube = moveRightPos(cube);
-      movement.type = "RIGHT + ";
+      movement.type = MovementType.RIGHT_POS;
     } else if (command == 5) {
       movement.cube = moveRightNeg(cube);
-      movement.type = "RIGHT - ";
+      movement.type = MovementType.RIGHT_NEG;
     }
 
     return movement;

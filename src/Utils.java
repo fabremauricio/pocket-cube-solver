@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Utils {
 
-  public static int[] randomArray(int size) {
+  public static int[] generateRandomArray(int size) {
     Random random = new Random();
     int[] array = new int[size];
 

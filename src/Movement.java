@@ -1,7 +1,17 @@
+enum MovementType {
+  INITIAL,
+  FRONT_POS,
+  FRONT_NEG,
+  RIGHT_POS,
+  RIGHT_NEG,
+  TOP_POS,
+  TOP_NEG,
+}
+
 public class Movement {
 
   public Cube cube;
-  public String type;
+  public MovementType type;
 
   @Override
   public boolean equals(Object o) {
@@ -15,7 +25,7 @@ public class Movement {
 
   public Movement() {}
 
-  public Movement(Cube cube, String type) {
+  public Movement(Cube cube, MovementType type) {
     this.cube = cube;
     this.type = type;
   }

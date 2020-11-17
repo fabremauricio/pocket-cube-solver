@@ -24,14 +24,14 @@ public class Cube {
   public Cube(int[] colors) {
     this.colors = new int[24];
 
-    int sum = 0;
+    int[] sums = new int[6];
     for (int i = 0; i < 24; i++) {
       this.colors[i] = colors[i];
-      sum += colors[i];
+      sums[colors[i]]++;
     }
 
-    if (sum != 60) {
-      throw new Error("Wrong format");
+    for (int i = 0; i < sums.length; i++) {
+      if (sums[i] != 4) throw new Error("Wrong format");
     }
   }
 
