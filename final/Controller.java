@@ -1,29 +1,5 @@
 public class Controller {
 
-  public static Cube moveRightPos(Cube cube) {
-    /** TODO */
-  }
-
-  public static Cube moveRightNeg(Cube cube) {
-    /** TODO */
-  }
-
-  public static Cube moveFrontPos(Cube cube) {
-    /** TODO */
-  }
-
-  public static Cube moveFrontNeg(Cube cube) {
-    /** TODO */
-  }
-
-  public static Cube moveTopPos(Cube cube) {
-    /** TODO */
-  }
-
-  public static Cube moveTopNeg(Cube cube) {
-    /** TODO */
-  }
-
   public static Movement move(Cube cube, int command) {
     Movement movement = new Movement();
     if (command == 0) {
@@ -58,5 +34,47 @@ public class Controller {
     }
 
     return output;
+  }
+
+  public static Cube moveRightPos(Cube cube) {
+    Cube result = new Cube(cube);
+    result.moveRight();
+    return result;
+  }
+
+  public static Cube moveRightNeg(Cube cube) {
+    Cube result = new Cube(cube);
+    result.moveRight();
+    result.moveRight();
+    result.moveRight();
+    return result;
+  }
+
+  public static Cube moveFrontPos(Cube cube) {
+    Cube result = new Cube(cube);
+    result.moveFront();
+    return result;
+  }
+
+  public static Cube moveFrontNeg(Cube cube) {
+    Cube result = new Cube(cube);
+    result.moveFront();
+    result.moveFront();
+    result.moveFront();
+    return result;
+  }
+
+  public static Cube moveTopPos(Cube cube) {
+    Cube result = new Cube(cube);
+    result.moveTop();
+    return result;
+  }
+
+  public static Cube moveTopNeg(Cube cube) {
+    Cube result = new Cube(cube);
+    result.moveTop();
+    result.moveTop();
+    result.moveTop();
+    return result;
   }
 }
