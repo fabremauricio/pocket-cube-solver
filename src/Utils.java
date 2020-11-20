@@ -6,7 +6,7 @@ public class Utils {
     /** TODO */
   }
 
-  public static void permutateCircular(int[] array, int[] permutations) {
+  public static void permutateCyclic(int[] array, int[] cycle) {
     /** TODO */
   }
 }

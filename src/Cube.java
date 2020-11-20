@@ -36,21 +36,21 @@ public class Cube {
   }
 
   public void moveRight() {
-    Utils.permutateCircular(this.colors, new int[] { FTR, TBR, BDR, DFR });
-    Utils.permutateCircular(this.colors, new int[] { FDR, TFR, BTR, DBR });
-    Utils.permutateCircular(this.colors, new int[] { RFT, RBT, RBD, RFD });
+    Utils.permutateCyclic(this.colors, new int[] { FTR, TBR, BDR, DFR });
+    Utils.permutateCyclic(this.colors, new int[] { FDR, TFR, BTR, DBR });
+    Utils.permutateCyclic(this.colors, new int[] { RFT, RBT, RBD, RFD });
   }
 
   public void moveTop() {
-    Utils.permutateCircular(this.colors, new int[] { FTR, LFT, BTL, RBT });
-    Utils.permutateCircular(this.colors, new int[] { FTL, LBT, BTR, RFT });
-    Utils.permutateCircular(this.colors, new int[] { TFR, TFL, TBL, TBR });
+    Utils.permutateCyclic(this.colors, new int[] { FTR, LFT, BTL, RBT });
+    Utils.permutateCyclic(this.colors, new int[] { FTL, LBT, BTR, RFT });
+    Utils.permutateCyclic(this.colors, new int[] { TFR, TFL, TBL, TBR });
   }
 
   public void moveFront() {
-    Utils.permutateCircular(this.colors, new int[] { TFR, RFD, DFL, LFT });
-    Utils.permutateCircular(this.colors, new int[] { TFL, RFT, DFR, LFD });
-    Utils.permutateCircular(this.colors, new int[] { FTR, FDR, FDL, FTL });
+    Utils.permutateCyclic(this.colors, new int[] { TFR, RFD, DFL, LFT });
+    Utils.permutateCyclic(this.colors, new int[] { TFL, RFT, DFR, LFD });
+    Utils.permutateCyclic(this.colors, new int[] { FTR, FDR, FDL, FTL });
   }
 
   public boolean isSolved() {

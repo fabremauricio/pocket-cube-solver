@@ -33,7 +33,7 @@ public class Main {
   public static void testPermutateCircular() {
     int[] array = new int[] { 0, 1, 2, 3, 4, 5, 6, 7 };
     printArray(array);
-    Utils.permutateCircular(array, new int[] { 0, 1, 2 });
+    Utils.permutateCyclic(array, new int[] { 0, 1, 2 });
     printArray(array);
   }
 

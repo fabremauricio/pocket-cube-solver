@@ -21,16 +21,16 @@ public class Utils {
     return array;
   }
 
-  public static void permutateCircular(int[] array, int[] permutations) {
-    int last = array[permutations[permutations.length - 1]];
+  public static void permutateCyclic(int[] array, int[] cycle) {
+    int last = array[cycle[cycle.length - 1]];
 
-    for (int i = permutations.length - 1; i > 0; i--) {
-      int from = permutations[i - 1];
-      int to = permutations[i];
+    for (int i = cycle.length - 1; i > 0; i--) {
+      int from = cycle[i - 1];
+      int to = cycle[i];
 
       array[to] = array[from];
     }
 
-    array[permutations[0]] = last;
+    array[cycle[0]] = last;
   }
 }
